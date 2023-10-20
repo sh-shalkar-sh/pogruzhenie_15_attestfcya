@@ -12,7 +12,7 @@ def get_file_info(path):
     path = Path(path)
 
     if not path.exists():
-        logging.error(f'Path "{path}" does not exist.')
+        logging.error(f'Путь "{path}" не найден!.')
         return
 
     for item in path.iterdir():
