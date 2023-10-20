@@ -17,7 +17,6 @@ def get_file_info(path):
         logging.error(f'Path "{path}" does not exist.')
         return
 
-    # Итерируемся по содержимому директории и собираем информацию
     for item in path.iterdir():
         is_dir = item.is_dir()
         name = item.stem if not is_dir else item.name
@@ -26,7 +25,6 @@ def get_file_info(path):
 
         file_info = FileInfo(name, extension, is_dir, parent_dir)
 
-        # Логируем информацию
         logging.info(
             f'Имя файла без расширения: {file_info.name}\n Расширение файла: {file_info.extension}\n Флаг каталога: {file_info.is_dir}\n Название родительского каталога: {file_info.parent_dir}\n-------------------------------------------------')
 
