@@ -3,10 +3,8 @@ import logging
 from collections import namedtuple
 from pathlib import Path
 
-# Настройки логирования
 logging.basicConfig(filename='file_info.log', level=logging.INFO, encoding="utf-8")
 
-# Создаем объект namedtuple для хранения информации о файле/каталоге
 FileInfo = namedtuple('FileInfo', ['name', 'extension', 'is_dir', 'parent_dir'])
 
 
